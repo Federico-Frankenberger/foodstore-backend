@@ -1,6 +1,6 @@
-# Primer Parcial — Programación IV
+# Segundo Parcial — Programación IV
 
-Backend REST API desarrollado con **FastAPI**, **SQLModel** y **PostgreSQL** como parte del primer parcial integrador de Programación IV (Food Store v5.0).
+Backend REST API desarrollado con **FastAPI**, **SQLModel** y **PostgreSQL** como parte del segundo parcial integrador de Programación IV (Food Store v5.0).
 
 ## Integrantes
 
@@ -12,7 +12,7 @@ Backend REST API desarrollado con **FastAPI**, **SQLModel** y **PostgreSQL** com
 ## Video de presentación
 
 <!-- Reemplazá este link con el link real del video una vez subido -->
-[Ver video de presentación](https://youtu.be/LINK_DEL_VIDEO)
+[Ver video de presentación](https://drive.google.com/file/d/1mqYssBVD3g0wrLyc2juGFW8DJPYThMXA/view?usp=sharing)
 
 ---
 
@@ -42,10 +42,10 @@ API completa para la gestión de una tienda de comida con:
 ```bash
 # 1. Clonar el repositorio y entrar al directorio backend
 git clone <url-del-repositorio>
-cd Primer_Parcial_Prog4/backend
 
 # 2. Crear entorno virtual e instalar dependencias
 python -m venv .venv
+
 .venv\Scripts\activate        # Windows
 # source .venv/bin/activate   # Linux/Mac
 
@@ -56,12 +56,10 @@ cp .env.example .env
 # Editar .env con los datos reales (ver sección Variables de entorno)
 
 # 4. Levantar la base de datos con Docker
-cd ..
 docker-compose up -d
-cd backend
 
-# 5. Iniciar el servidor (puerto 8000 por defecto)
-uvicorn app.main:app --reload
+# 5. Iniciar el servidor 
+fastapi dev app/main.py  
 ```
 
 Las migraciones Alembic y el seed inicial (roles, estados, formas de pago, usuario admin) se aplican automáticamente al iniciar el servidor.
